@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="711" height="683" viewBox="0 0 711 683">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_10353" data-name="Rectangle 10353" width="711" height="683" transform="translate(655 85)" fill="#f5faed"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#9dc84d" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#9dc84d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="Mask_Group_1118" data-name="Mask Group 1118" transform="translate(-655 -85)" opacity="0.8" clip-path="url(#clip-path)">
+    <circle id="Ellipse_442" data-name="Ellipse 442" cx="503" cy="503" r="503" transform="translate(655 84)" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

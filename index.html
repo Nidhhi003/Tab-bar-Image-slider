@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tab-Header And Image-Slider</title>
+
+   <style>
+    .case-card {
+             /* background: #F0EAE1A6; */
+             background-color: #FFFFFF;
+             padding: 40px ;
+             margin: auto;
+        }
+
+        .case-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            border: 1px solid #E7EBDF;
+            border-radius: 30px;
+            background-color: white;
+            gap: 30px;
+            align-items: center;
+            display: none;
+            padding: 40px 20px;
+            box-shadow: 5px 5px 25px #4B57681A;
+        }
+                /*header*/
+        .case-header{
+            text-align: center;
+            margin-bottom: 15px;
+           
+        }
+        .case-header h2{
+            color: #1C1D1F;
+            font-size: 46px;
+            margin-bottom: 15px;
+            font-family: 'Inter';
+        }
+        .case-header p{
+            font-size: 16px; 
+            padding-bottom: 10px;
+            font-family: 'Inter';
+            
+        }
+            /*****Head*****/
+        .case-left{
+            padding: 20px 20px;
+            
+        }
+        .case-head{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+           
+        }
+         .case-head h4{
+            color: #4A2711;
+            font: bold;
+            font-size: 40px;
+            text-align: left;
+            font-family: 'Inter';
+        }
+        .case-head p{
+            color: #1C1D1F;
+            font-size: 18px;
+            text-align: left;
+            font-family: 'Inter';
+            
+            
+        }
+        .divider {
+            width: 1px;
+            height: 50px;
+            background: #ddd;
+        }
+        .case-head-left, 
+        .case-head-right{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: left;
+           
+            
+        }
+        /*****BODY*****/
+        .case-body p{
+            font-size: 16px;
+            margin-bottom: 25px;
+            font-family: 'Inter';
+            
+        }
+
+        /*****FOOTER*****/
+        .case-footer{
+            display: flex;
+            justify-content: space-between;
+        }
+        .case-footer p{
+                font-size: 18px;
+                font-family: 'Inter';
+
+        }
+        .btn.dark{
+             background-color: #4A2711;
+             color: #fff; 
+        }
+        /******RIGHT IMAGE******/
+        .case-right {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+        }  
+
+        .case-right img {
+            object-fit:cover;
+            width: 80%;
+            height: 80%;
+            
+        }
+        /* .case-content:first-of-type {
+            display: grid;
+        } */
+
+    /*TABS SECTION*/
+ .case-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 25px 20px;
+  
+  margin-top: 20px;
+}
+
+.tab-logo {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-logo img {
+  height: 40px;
+  width: auto;
+  filter: grayscale(120%);
+}
+
+.tab-logo:hover {
+  opacity: 1;
+}
+
+/* ACTIVE TAB */
+.tab-logo.active {
+  opacity: 1;
+}
+
+.tab-logo.active img {
+  filter: grayscale(0%);
+}
+
+
+/* VIEW ALL BUTTON */
+.view-all-btn {
+  /* margin-left: auto; */
+  background: #f3ebe4;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: 'Inter';
+  cursor: pointer;
+  color: #6b3a12;
+  transition: 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background: #eadfd6;
+}
+.progress-bar {
+  position: relative;
+  height: 2px;
+  margin-top: 15px;
+  background: #e6e1da;
+  border-radius: 10px;
+}
+
+.progress-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 20%;
+  background: #6b3f1d;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+/***image slider*****/
+.img-slider{
+             width: 100%;
+             overflow: hidden;
+
+        }
+       
+        figure{
+            position: relative;
+            left: 0;
+            display: flex;
+            gap: 40px; 
+            width: max-content;
+            animation: move-logo 20s linear infinite; 
+            
+        }
+      
+         @keyframes move-logo {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+        
+  </style>
+</head>
+<body>
+    
+<section class="case-card">
+<div class="case-header">
+    <h2>Case Studies</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text.</p>
+</div>
+<div id="Sula" class="case-content">
+    <div class="case-left">
+        <!-- HEADER -->
+        <div class="case-head">
+        <div class="case-head-left">
+             <h4>18%</h4>
+            <p>Increase in per<br>unit area yiled</p>
+        </div>
+        <div class="divider"></div>
+        <div class="case-head-right">
+            <h4>24%</h4>
+             <p>Reduction in<br>production cost</p>
+            </div>
+
+        </div>
+        <!-- BODY TEXT -->
+        <div class="case-body">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+        
+         </div>
+         <!-- FOOTER -->
+          <div class="case-footer">
+            <button class="btn primary dark">Read case study</button>
+            <p>- Team SulaVineyards</p>
+        </div>
+
+    </div>
+    <!-- RIGHT IMAGE -->
+     <div class="case-right">
+      <img src="./images/Group 50534.png" alt="Sula Vineyards">
+      
+    </div>
+</div>  
+<div id="Action-Tesa" class="case-content">
+    <div class="case-left">
+        <!-- HEADER -->
+        <div class="case-head">
+        <div class="case-head-left">
+             <h4>4%</h4>
+            <p>Increase in per<br>unit area yiled</p>
+        </div>
+        <div class="divider"></div>
+        <div class="case-head-right">
+            <h4>8%</h4>
+             <p>Reduction in<br>production cost</p>
+            </div>
+
+        </div>
+        <!-- BODY TEXT -->
+        <div class="case-body">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+        
+         </div>
+         <!-- FOOTER -->
+          <div class="case-footer">
+            <button class="btn primary dark">Read case study</button>
+            <p>- Team Action-Tesa</p>
+        </div>
+
+    </div>
+    <!-- RIGHT IMAGE -->
+     <div class="case-right">
+      <img src="./images/Group 50283.png" alt="Action-tesa">
+      
+    </div>
+</div>
+<div id="Agristo" class="case-content">
+    <div class="case-left">
+        <!-- HEADER -->
+        <div class="case-head">
+        <div class="case-head-left">
+             <h4>24%</h4>
+            <p>Increase in per<br>unit area yiled</p>
+        </div>
+        <div class="divider"></div>
+        <div class="case-head-right">
+            <h4>18%</h4>
+             <p>Reduction in<br>production cost</p>
+            </div>
+        </div>
+        <!-- BODY TEXT -->
+        <div class="case-body">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+         </div>
+         <!-- FOOTER -->
+          <div class="case-footer">
+            <button class="btn primary dark">Read case study</button>
+            <p>- Team Agristo</p>
+        </div>
+    </div>
+    <!-- RIGHT IMAGE -->
+     <div class="case-right">
+      <img src="./images/Mask Group 1453.png" alt="Agristo">
+    </div>
+</div>
+<div id="Syngenta" class="case-content">
+    <div class="case-left">
+        <!-- HEADER -->
+        <div class="case-head">
+        <div class="case-head-left">
+             <h4>8%</h4>
+            <p>Increase in per<br>unit area yiled</p>
+        </div>
+        <div class="divider"></div>
+        <div class="case-head-right">
+            <h4>4%</h4>
+             <p>Reduction in<br>production cost</p>
+            </div>
+        </div>
+        <!-- BODY TEXT -->
+        <div class="case-body">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+         </div>
+         <!-- FOOTER -->
+          <div class="case-footer">
+            <button class="btn primary dark">Read case study</button>
+            <p>- Team Syngenta</p>
+        </div>
+    </div>
+    <!-- RIGHT IMAGE -->
+     <div class="case-right">
+      <img src="./images/Group 50534.png" alt="Syngenta">
+    </div>
+</div>
+
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-wrapper">
+    <div class="progress-bar">
+      <span class="progress-indicator"></span>
+    </div>
+  </div>
+
+<div class="case-tabs">
+  <button class="tab-logo active" data-tab="Sula">
+    <img src="./images/Group 48832.png" alt="Sula Vineyards">
+  </button>
+
+  <button class="tab-logo" data-tab="Action-Tesa">
+    <img src="./images/Group 48833.png" alt="Action-Tesa">
+  </button>
+
+  <button class="tab-logo" data-tab="Agristo">
+    <img src="./images/Group 48834.png" alt="Agristo">
+  </button>
+
+
+  <button class="tab-logo" data-tab="Syngenta">
+    <img src="./images/Group 48836.png" alt="Syngenta">
+  </button>
+
+  <button class="view-all-btn">
+    View All
+  </button>
+
+</div>
+
+<section class="image-slider-section">
+  <div class="img-slider">
+    <figure>
+        <!-- REAL SLIDES -->
+       
+        <div class="slide">
+            <img src="./images/Group 20323.png" alt="sula company logo">
+        </div>
+        <div class="slide">        
+            <img src="./images/Group 20324.png" alt="action-tesa company logo">
+        </div>
+        <div class="slide">
+            <img src="./images/Group 20325.png" alt="company logo">
+        </div>
+        <div class="slide">
+            <img src="./images/Group 20326.png" alt="agristo company logo">
+        </div>
+        <div class="slide">        
+            <img src="./images/Group 20327.png" alt="KVK company logo">
+        </div>
+        <div class="slide">       
+             <img src="./images/Group 20328.png" alt="syngenta company logo">
+        </div>
+        <div class="slide">        
+            <img src="./images/Group 20329.png" alt="dhanashree company logo">
+        </div>
+        <div class="slide">       
+             <img src="./images/Group 20330.png" alt="soul company logo">
+        </div>
+         
+
+        <!-- DUPLICATE SILDES -->
+        <div >
+            <img src="./images/Group 20323.png" alt="sula company logo">
+        </div>
+        <div >        
+            <img src="./images/Group 20324.png" alt="action-tesa company logo">
+        </div>
+        <div >
+            <img src="./images/Group 20325.png" alt="company logo">
+        </div>
+        <div >
+            <img src="./images/Group 20326.png" alt="agristo company logo">
+        </div>
+        <div >        
+            <img src="./images/Group 20327.png" alt="KVK company logo">
+        </div>
+        <div >       
+             <img src="./images/Group 20328.png" alt="syngenta company logo">
+        </div>
+        <div >        
+            <img src="./images/Group 20329.png" alt="dhanashree company logo">
+        </div>
+        <div >       
+             <img src="./images/Group 20330.png" alt="soul company logo">
+        </div>
+
+    </figure>
+</div>
+
+</section>
+
+<script>
+  const tabs = document.querySelectorAll(".tab-logo");
+  const contents = document.querySelectorAll(".case-content");
+  contents[0].style.display = "grid";
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+
+      /* Activate clicked logo */
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      const targetId = tab.dataset.tab;
+
+      /* Show matching content only */
+      contents.forEach(content => {
+        content.style.display =
+          content.id === targetId ? "grid" : "none";
+      });
+
+    });
+  });
+
+  /* Progress tab */
+   const bars = document.querySelectorAll(".tab-logo");
+  const indicator = document.querySelector(".progress-indicator");
+  const totalTabs = bars.length;
+
+  function moveIndicator(index) {
+    const percentage = (index / totalTabs) * 100;
+    indicator.style.left = percentage + "%";
+  }
+
+  bars.forEach((bar, index) => {
+    bar.addEventListener("click", () => {
+      document.querySelector(".tab-logo.active")?.classList.remove("active");
+      bar.classList.add("active");
+      moveIndicator(index);
+    });
+  });
+
+  // Initial position
+  moveIndicator(0);
+</script>
+</section>
+
+
+
+</body>
+</html>
+
+
